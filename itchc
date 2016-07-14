@@ -89,18 +89,8 @@ def main():
         ensure_args(3)
         print_dl_links(sys.argv[2], sys.argv[3:])
     else:
-        print("usage: %s <command> [<args>]" % sys.argv[0], file=sys.stderr)
-        print("<command> can be one of the following:", file=sys.stderr)
-        print(file=sys.stderr)
-        print("  keys    - display keys associated with the account", file=sys.stderr)
-        print("    output: key id, game id, platforms, game title", file=sys.stderr)
-        print(file=sys.stderr)
-        print("  uploads - display uploads associated with the key", file=sys.stderr)
-        print("    args: key", file=sys.stderr)
-        print("    output: key id, upload id, platforms, last update, game title", file=sys.stderr)
-        print(file=sys.stderr)
-        print("  dl      - display download links for chosen uploads", file=sys.stderr)
-        print("    args: key, upload id...", file=sys.stderr)
+        print("usage: %s keys|uploads|dl [args]" % sys.argv[0], file=sys.stderr)
+        print("see the manual page for more details", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

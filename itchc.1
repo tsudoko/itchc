@@ -1,0 +1,38 @@
+.TH ITCHC 1
+.SH NAME
+itchc \- itch.io client utility
+
+.SH SYNOPSIS
+.B itchc
+.I command
+[
+.I arg...
+]
+
+.SH DESCRIPTION
+.I Itchc
+is a simple command line utility which can be used to view itch.io purchases
+and access download links for owned games.
+.I Itchc
+requires the
+.B ITCHIO_API_KEY
+environment variable to contain an itch.io API key. Keys can be generated at
+https://itch.io/user/settings/api-keys.
+
+.SH COMMANDS
+All commands with the exception of
+.I dl
+output tab-separated values.
+.TP
+.B keys
+Display keys associated with the account.
+
+Fields: key id, game id, platforms, game title
+.TP
+.BI uploads " key"
+Display uploads associated with the key.
+
+Fields: key id, upload id, platforms, last update, game title
+.TP
+.BI dl " key upload_id..."
+Display download URLs for given uploads.
