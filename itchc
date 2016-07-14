@@ -24,7 +24,7 @@ def errcheck(dic):
         print("API error:", file=sys.stderr)
 
         for i in dic['errors']:
-            print(" - " + i)
+            print(" - " + i, file=sys.stderr)
 
         exit(1)
 
